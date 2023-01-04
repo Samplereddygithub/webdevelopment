@@ -1,109 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,
+						initial-scale=1.0">
+	<title>
+		Temperature Conversion between
+		Celsius, Fahrenheit & Kelvin
+	</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+
+		.container {
+			width: 100%;
+			height: 100vh;
+			background-image:
+			linear-gradient(rgba(18, 63, 225, 0.86), rgb(17, 6, 119));
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container h1 {
+			color: rgb(8, 9, 5);
+			font-weight: 1000;
+			font-size: 50px;
+			text-align: center;
+		}
+
+		.converter-row {
+			display: flex;
+			width: 40%;
+			justify-content: space-between;
+			align-items: center;
+			background: rgb(228, 23, 23);
+			border-radius: 10px;
+			padding: 50px 20px;
+		}
+
+		.col {
+			flex-basis: 32%;
+			text-align: center;
+		}
+
+		.col label {
+			font-size: 15px;
+			font-weight: 500;
+			margin-bottom: 10px;
+			color: #fff;
+		}
+
+		.col input {
+			width: 150px;
+			height: 30px;
+			background: white;
+			border-radius: 5px;
+			text-align: center;
+		}
+	</style>
 </head>
+
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.jpg" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>Student</p>
-                <h1>Hi,I'am<span> K.Bhargavi </span></h1>
-            </div>
-        </div>
-    </div>
-    <!-- about -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/WhatsApp Image 2022-12-24 at 14.31.15.jpg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        I'am Bhargavi<br>
-                        Work For An Organization That Provides Me The Opportunity To Improve My Skills And Knowledge To Grow Along With The Organization's Objective.
-                    </p>
-                   <div class="tab-titles">
-                    <p class="tab-links">Skills</p><br>
-                    <li><span>Web Development</span><br>HTML/CSS/JS</li><br>
-                    <li><span>Languages</span><br>C++/Python</li> <br>
-                   </div>
-                    <p class="tab-links">Education</p><br>
-                    <li><span>BE-TY</span></li> 
-                   </div>
-                   </div>
-                </div>
-     </div>
+	<div class="container">
+		<h1>Temperature Converter</h1>
+		<div class="converter-row">
+			<div class="col">
+				<label>Fahrenheit</label>
+				<input type="number" id="fahrenheit">
+			</div>
 
+			<div class="col">
+				<label>Celsius</label>
+				<input type="number" id="celsius">
+			</div>
 
-      <!-----------------services  ---------------->
-    
-     <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-            <h2> Intern at Oasis Infobyte</h2><br>
-            <p>Work For An Organization That Provides Me The <br>Opportunity To Improve My Skills.</p>
-        </div>
-        </div>
-     </div>
-     <!-- -------------portfolio-------------- -->
-     <div id="portolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="Work-lists">
-                <h2>Internship</h2>
-                <p>Completed Intern At Oasis Infobyte<br> Improve My Skills And Knowledge To Grow Along<br> With The Organization's Objective</p>
-            </div>
+			<div class="col">
+				<label>Kelvin</label>
+				<input type="number" id="kelvin">
+			</div>
+		</div>
+	</div>
 
-        </div> 
-     </div>
-     <br>
-     <br>
-     <br>
-     <br>
-     <!-- -------contact-------- -->
-     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p>reddykambam456@gmail.com</p>
-                    <p>......</p> <br>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-     </div>
-     <br>
-     <br><br><br>
+	<script>
+		let celsius = document.getElementById('celsius');
+		let fahrenheit = document.getElementById('fahrenheit');
+		let kelvin = document.getElementById('kelvin');
+		celsius.oninput = function () {
+			let f = (parseFloat(celsius.value) * 9) / 5 + 32;
+			fahrenheit.value = parseFloat(f.toFixed(2));
 
+			let k = (parseFloat(celsius.value) + 273.15);
+			kelvin.value = parseFloat(k.toFixed(2));
+		}
+		fahrenheit.oninput = function () {
+			let c = ((parseFloat(
+				fahrenheit.value) - 32) * 5) / 9;
+			celsius.value = parseFloat(c.toFixed(2));
 
+			let k = (parseFloat(
+				fahrenheit.value) - 32) * 5 / 9 + 273.15;
+			kelvin.value = parseFloat(k.toFixed(2));
+		}
+		kelvin.oninput = function () {
+			let f = (parseFloat(
+				kelvin.value) - 273.15) * 9 / 5 + 32;
+			fahrenheit.value = parseFloat(f.toFixed(2));
 
-
-    
+			let c = (parseFloat(kelvin.value) - 273.15);
+			celsius.value = parseFloat(c.toFixed(2));
+		}
+	</script>
 </body>
-</html> 
+</html>
