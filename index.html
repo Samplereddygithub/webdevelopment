@@ -4,48 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page design using html css</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <nav class="nav1">
-        <div>
-            <p>
-                rayalaseema university college of engineering,kurnool-518001
-            </p>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi,I'am<span> K.Bhargavi </span></h1>
+            </div>
         </div>
-        <div>
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-google"></i>
-            <i class="fa fa-youtube"></i>
-            <a href="#">Signup</a>
-            <a href="#">Signin</a>
-        </div>
-    </nav>
-    <nav class="nav2">
-        <div>
-            <img src="https://www.mpscworld.com/wp-content/uploads/2021/02/Navbharat-Shikshan-Mandal-Sangli-300x158.jpg">
-        </div>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">Admission</a>
-            <a href="#">Events</a>
-            <a href="#">Pages</a>
-            <a href="#">Student</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/WhatsApp Image 2022-12-24 at 14.31.15.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I'am Bhargavi<br>
+                        Work For An Organization That Provides Me The Opportunity To Improve My Skills And Knowledge To Grow Along With The Organization's Objective.
+                    </p>
+                   <div class="tab-titles">
+                    <p class="tab-links">Skills</p><br>
+                    <li><span>Web Development</span><br>HTML/CSS/JS</li><br>
+                    <li><span>Languages</span><br>C++/Python</li> <br>
+                   </div>
+                    <p class="tab-links">Education</p><br>
+                    <li><span>BE-TY</span></li> 
+                   </div>
+                   </div>
+                </div>
+     </div>
 
-<div class="h-text">
-    <h1> WELCOME TO <SPAN>COLLEGE</SPAN></h1>
-    <p>There are many variations of passengers of lorem Ipsum available, but the majority have suffered alteration in some form</p>
-    <a href="#">Courses</a>
-    <a href="#">Learn</a>
-</div>
 
-</header>
+      <!-----------------services  ---------------->
+    
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+            <h2> Intern at Oasis Infobyte</h2><br>
+            <p>Work For An Organization That Provides Me The <br>Opportunity To Improve My Skills.</p>
+        </div>
+        </div>
+     </div>
+     <!-- -------------portfolio-------------- -->
+     <div id="portolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="Work-lists">
+                <h2>Internship</h2>
+                <p>Completed Intern At Oasis Infobyte<br> Improve My Skills And Knowledge To Grow Along<br> With The Organization's Objective</p>
+            </div>
+
+        </div> 
+     </div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <!-- -------contact-------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>reddykambam456@gmail.com</p>
+                    <p>......</p> <br>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+     <br>
+     <br><br><br>
+
+
+
+
+    
 </body>
-</html>
+</html> 
