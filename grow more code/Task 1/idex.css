@@ -1,0 +1,32 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .converter {
+    margin-top: 20px;
+  }
+  
+  input, select, button {
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

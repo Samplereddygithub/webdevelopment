@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+  <link rel="stylesheet" type="text/css" href="idex.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Currency Converter</h1>
+    <div class="converter">
+      <input type="number" id="amount" placeholder="Enter amount">
+      <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <!-- Add more currency options here -->
+      </select>
+      <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <!-- Add more currency options here -->
+      </select>
+      <button onclick="convertCurrency()">Convert</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
